@@ -1,4 +1,5 @@
 import pygame
+from settings import Settings
 
 class Ship:
     """class for managing the ship"""
@@ -7,9 +8,10 @@ class Ship:
         """initialisation and set first position"""
         self.screen = ai_game.screen
         self.screen_rect = ai_game.screen.get_rect()
+        self.settings = Settings()
 
         # download pic of the ship and get her rect
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load(self.settings.image)
         self.rect = self.image.get_rect()
 
         # Create even new ship in bottom of the screen in center

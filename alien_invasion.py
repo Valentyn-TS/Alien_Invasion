@@ -21,7 +21,7 @@ class AlienInvasion:
         self.ship = Ship(self)
 
         # Set bkg color
-        self.bg_color = (230, 230, 230)
+        self.bg_color = self.settings.bg_color
 
     def _check_events(self):
         # Look for the moving mouse or click on the buttons
